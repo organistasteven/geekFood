@@ -1,0 +1,49 @@
+{% extends 'baseback.html.twig' %}
+
+{% block title %}Drink index{% endblock %}
+
+{% block body %}
+    <div class="backshow">
+    <h1>Boissons index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Icon</th>
+                <th>Image</th>
+                <th>Content</th>
+                <th>Price</th>
+                <th>Type</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for drink in drinks %}
+            <tr>
+                <td>{{ drink.id }}</td>
+                <td>{{ drink.name }}</td>
+                <td>{{ drink.description }}</td>
+                <td>{{ drink.icon }}</td>
+                <td>{{ drink.image }}</td>
+                <td>{{ drink.content }}</td>
+                <td>{{ drink.price }}</td>
+                <td>{{ drink.type }}</td>
+                <td>
+                    <a class="btn btn-primary" href="{{ path('app_drink_show', {'id': drink.id}) }}">Détail</a>
+                    <a class="btn btn-warning" href="{{ path('app_drink_edit', {'id': drink.id}) }}">Edition</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="btn btn-success" href="{{ path('app_drink_new') }}">Ajouter une nouvelle boisson</a>
+    </div>
+{% endblock %}

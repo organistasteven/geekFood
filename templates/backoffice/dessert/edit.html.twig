@@ -1,0 +1,13 @@
+{% extends 'baseback.html.twig' %}
+
+{% block title %}Edit Dessert{% endblock %}
+
+{% block body %}
+    <h1>Edition du dessert</h1>
+
+    {{ include('backoffice/dessert/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a class="btn btn-info" href="{{ path('app_dessert_index') }}">Index</a>
+
+    {{ include('backoffice/dessert/_delete_form.html.twig') }}
+{% endblock %}

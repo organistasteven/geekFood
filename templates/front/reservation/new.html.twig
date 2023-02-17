@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Reservation{% endblock %}
+
+{% block body %}
+<div class='title'>
+    <h1>Réservation</h1>
+    <p> Pour des raisons de forte afluences nous vous consseillons de réserver au moins une semaine à l'avance, un mail de confirmation vous sera envoyé dans les 24 heures suivant votre demande.
+    Si votre réservation est refuser une autre date vous sera proposée.Nous vous invitons également à nous indiquer toutes les informations utilies (alérgie alimentaire, handicap, enfant en bas âges ...)ceci afin de vous acceuillir dans les meilleures conditions.</p>-
+</div>
+<main>
+<div class="contact">
+    <section>
+      <p>Par téléphone:</p>
+     <phone:a class="phone">01-55-57-89-00</phone:a>
+    </section>
+        <hr>
+
+    <section>
+    {{ include('backoffice/reservation/_form.html.twig') }}
+   
+     </section>
+    </div>
+            <div class="nav">
+            
+           
+            <section>
+                <h4>La carte</h4>
+                <li><a href="../html/list.html">Entrées</a></li>
+                <li><a href="../html/list.html">Plats</a></li>
+                <li><a href="../html/list.html">Desserts</a></li>
+                <li><a href="../html/list.html">Boisons</a></li>
+                <li><a href="../html/menu.html">Menus</a></li>
+            </section>
+        </div>
+        <div class="nav">
+            
+           
+            <section>
+                <h4>Liste des jeux disponibles:</h4>
+                <li>Mario Kart</li>
+                <li>Smash Bros</li>
+                <li>Halo</li>
+                <li>Dragon Ball Ragging Blast 2</li>
+                <li>Street Figthers</li>
+                <li>Forza</li>
+                <li>FIFA</li>
+                <li>Ace Combat</li>
+                <li>Call Of Duty</li>
+                <li>Mario Party</li>
+            </section>
+        
+        </div>
+    </main>
+{% endblock %}

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="456" height="340" viewBox="0 0 456 340" xmlns="http://www.w3.org/2000/svg">
+<rect id="frame" x="0" y="0" width="456" height="340" fill="#f7f7f7" stroke="none" stroke-width="0"/>
+
+<!-- Entity plats -->
+<g class="page_0_dKSrlH8e diagram_page" visibility="visible">
+	<g>
+		<rect x="187" y="9" width="78" height="25" fill="#f1b6da" stroke="#f1b6da" stroke-width="0" opacity="1"/>
+		<rect x="187" y="34" width="78" height="145" fill="#fde0ef" stroke="#fde0ef" stroke-width="0" opacity="1"/>
+		<rect x="187" y="9" width="78" height="170" fill="none" stroke="#de77ae" stroke-width="2" opacity="1"/>
+		<line x1="187" y1="34" x2="265" y2="34" stroke="#de77ae" stroke-width="1"/>
+	</g>
+	<text x="211" y="26.75" fill="#000" font-family="Verdana" font-size="12">plats</text>
+	<text x="192" y="51.8" fill="#000" font-family="Verdana" font-size="12">code_plat</text>
+	<line x1="192" y1="54" x2="252" y2="54" stroke="#000" stroke-width="1"/>
+	<text x="192" y="68.8" fill="#000" font-family="Verdana" font-size="12">name</text>
+	<text x="192" y="85.8" fill="#000" font-family="Verdana" font-size="12">description</text>
+	<text x="192" y="102.8" fill="#000" font-family="Verdana" font-size="12">icon</text>
+	<text x="192" y="119.8" fill="#000" font-family="Verdana" font-size="12">image</text>
+	<text x="192" y="136.8" fill="#000" font-family="Verdana" font-size="12">ingredient</text>
+	<text x="192" y="153.8" fill="#000" font-family="Verdana" font-size="12">price</text>
+	<text x="192" y="170.8" fill="#000" font-family="Verdana" font-size="12">type</text>
+</g>
+
+<!-- Entity drink -->
+<g class="page_0_dKSrlH8e diagram_page" visibility="visible">
+	<g>
+		<rect x="41" y="161" width="78" height="25" fill="#f1b6da" stroke="#f1b6da" stroke-width="0" opacity="1"/>
+		<rect x="41" y="186" width="78" height="145" fill="#fde0ef" stroke="#fde0ef" stroke-width="0" opacity="1"/>
+		<rect x="41" y="161" width="78" height="170" fill="none" stroke="#de77ae" stroke-width="2" opacity="1"/>
+		<line x1="41" y1="186" x2="119" y2="186" stroke="#de77ae" stroke-width="1"/>
+	</g>
+	<text x="64" y="178.75" fill="#000" font-family="Verdana" font-size="12">drink</text>
+	<text x="46" y="203.8" fill="#000" font-family="Verdana" font-size="12">code_drink</text>
+	<line x1="46" y1="206" x2="113" y2="206" stroke="#000" stroke-width="1"/>
+	<text x="46" y="220.8" fill="#000" font-family="Verdana" font-size="12">name</text>
+	<text x="46" y="237.8" fill="#000" font-family="Verdana" font-size="12">description</text>
+	<text x="46" y="254.8" fill="#000" font-family="Verdana" font-size="12">icon</text>
+	<text x="46" y="271.8" fill="#000" font-family="Verdana" font-size="12">image</text>
+	<text x="46" y="288.8" fill="#000" font-family="Verdana" font-size="12">ingredient</text>
+	<text x="46" y="305.8" fill="#000" font-family="Verdana" font-size="12">price</text>
+	<text x="46" y="322.8" fill="#000" font-family="Verdana" font-size="12">type</text>
+</g>
+
+<!-- Entity list -->
+<g class="page_0_dKSrlH8e diagram_page" visibility="visible">
+	<g>
+		<rect x="183" y="204" width="86" height="25" fill="#f1b6da" stroke="#f1b6da" stroke-width="0" opacity="1"/>
+		<rect x="183" y="229" width="86" height="59" fill="#fde0ef" stroke="#fde0ef" stroke-width="0" opacity="1"/>
+		<rect x="183" y="204" width="86" height="84" fill="none" stroke="#de77ae" stroke-width="2" opacity="1"/>
+		<line x1="183" y1="229" x2="269" y2="229" stroke="#de77ae" stroke-width="1"/>
+	</g>
+	<text x="217" y="221.75" fill="#000" font-family="Verdana" font-size="12">list</text>
+	<text x="188" y="246.8" fill="#000" font-family="Verdana" font-size="12">10list_plat</text>
+	<line x1="188" y1="249" x2="252" y2="249" stroke="#000" stroke-width="1"/>
+	<text x="188" y="263.8" fill="#000" font-family="Verdana" font-size="12">10list_drink</text>
+	<text x="188" y="280.8" fill="#000" font-family="Verdana" font-size="12">11list_menu</text>
+</g>
+
+<!-- Entity menu -->
+<g class="page_0_dKSrlH8e diagram_page" visibility="visible">
+	<g>
+		<rect x="333" y="195" width="82" height="25" fill="#f1b6da" stroke="#f1b6da" stroke-width="0" opacity="1"/>
+		<rect x="333" y="220" width="82" height="77" fill="#fde0ef" stroke="#fde0ef" stroke-width="0" opacity="1"/>
+		<rect x="333" y="195" width="82" height="102" fill="none" stroke="#de77ae" stroke-width="2" opacity="1"/>
+		<line x1="333" y1="220" x2="415" y2="220" stroke="#de77ae" stroke-width="1"/>
+	</g>
+	<text x="357" y="212.75" fill="#000" font-family="Verdana" font-size="12">menu</text>
+	<text x="338" y="237.8" fill="#000" font-family="Verdana" font-size="12">code_menu</text>
+	<line x1="338" y1="240" x2="409" y2="240" stroke="#000" stroke-width="1"/>
+	<text x="338" y="254.8" fill="#000" font-family="Verdana" font-size="12">name</text>
+	<text x="338" y="271.8" fill="#000" font-family="Verdana" font-size="12">description</text>
+	<text x="338" y="288.8" fill="#000" font-family="Verdana" font-size="12">price</text>
+</g>
+
+<!-- Link from &quot;code_plat&quot; (list) to &quot;code_plat&quot; (plats) -->
+<path d="M269 242.5 C323 145 319 47.5 265 47.5" fill="none" stroke="#7fbc41" stroke-width="2"/>
+<polygon points="265 47.5 277 41.5 273 47.5 277 53.5" fill="#7fbc41" stroke-width="0"/>
+<circle cx="269" cy="242.5" r="2" stroke="#7fbc41" stroke-width="2" fill="#7fbc41"/>
+
+<!-- Link from &quot;code_drink&quot; (list) to &quot;code_drink&quot; (drink) -->
+<path d="M183 259.5 C151 229.5 161.67 199.5 119 199.5" fill="none" stroke="#7fbc41" stroke-width="2"/>
+<polygon points="119 199.5 131 193.5 127 199.5 131 205.5" fill="#7fbc41" stroke-width="0"/>
+<circle cx="183" cy="259.5" r="2" stroke="#7fbc41" stroke-width="2" fill="#7fbc41"/>
+
+<!-- Link from &quot;code_menu&quot; (list) to &quot;code_menu&quot; (menu) -->
+<path d="M269 276.5 C301 255 290.33 233.5 333 233.5" fill="none" stroke="#7fbc41" stroke-width="2"/>
+<polygon points="333 233.5 321 239.5 325 233.5 321 227.5" fill="#7fbc41" stroke-width="0"/>
+<circle cx="269" cy="276.5" r="2" stroke="#7fbc41" stroke-width="2" fill="#7fbc41"/>
+</svg>

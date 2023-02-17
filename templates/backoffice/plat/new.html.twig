@@ -1,0 +1,13 @@
+{% extends 'baseback.html.twig' %}
+
+{% block title %}New Plat{% endblock %}
+
+{% block body %}
+<div class="backshow">
+    <h1>Création d'un nouveau plat</h1>
+
+    {{ include('backoffice/plat/_form.html.twig') }}
+
+    <a class="btn btn-info" href="{{ path('app_plat_index') }}">Index</a>
+</div>
+{% endblock %}

@@ -1,0 +1,52 @@
+
+{# templates/login/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{# ... #}
+
+{% block body %}
+<div class="title">
+ <h1>Ceci est une page réservé au personnel du restaurant</h1>
+ <p>Donc veillez passez votre chemin sauf si vous êtes un employé au quel cas bougez-vous si vous avez pris le temps de lire ce massage c'est que vous êtes en retard!</p>
+</div>
+<br>
+<div class="contact">
+    <h1>Connexion</h1>
+    
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    <form action="{{ path('app_login') }}" method="post">
+   <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+        <div class="mb-3">
+            <label for="_username" class="form-label">Adresse e-mail</label>
+            <input type="email" class="form-control" id="_username" name="_username" value="{{ last_username }}">
+        </div>
+        <div class="mb-3">
+            <label for="_password" class="form-label">Mot de passe</label>
+            <input type="password" class="form-control" id="_password" name="_password">
+        </div>
+
+       
+
+        <button type="submit" class="btn btn-success">Connexion</button>
+    </form>
+</div>
+<br>
+        <div class="nav">
+            <section>
+                <h4>Notre équipe de choc</h4>
+                <li>Benjamin Lafayette Sisko <p class="job"> (chef cuisinier)</p></li>
+                <li>Sanji Fireleg <p class="job">(1er commis)</p></li>
+                <li>Pierre Racailloux <p class="job">(2eme commis)</p></li>
+                <li>Alfred Penyworth <p class="job">(chef de salle)</p></li>
+                <li>Cichi Goku <p class="job">(serveuse)</p></li>
+                <li>Yuna Bessaid <p class="job">(serveuse)</p></li>
+                <li>Ghi Nhan <p class="job">(barmaid)</p></li>
+                <li>Wrex Urdot <p class="job">(vigile)</p></li>
+                
+            </section>
+         
+        </div>
+{% endblock %}

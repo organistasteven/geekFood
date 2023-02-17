@@ -1,0 +1,14 @@
+{% extends 'baseback.html.twig' %}
+
+{% block title %}Edit Reservation{% endblock %}
+
+{% block body %}
+    <h1>Gestion des  Reservations</h1>
+  
+    {{ include('backoffice/reservation/_form.html.twig', {'button_label': 'Update'}) }}
+
+
+    <a class="btn btn-info" href="{{ path('app_reservation_index') }}">Liste des réservations</a>
+
+    {{ include('backoffice/reservation/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'baseback.html.twig' %}
+
+{% block title %}Dessert{% endblock %}
+
+{% block body %}
+<div class = "backshow">
+    <h1>Dessert</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ dessert.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ dessert.name }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ dessert.description }}</td>
+            </tr>
+            <tr>
+                <th>Icon</th>
+                <td>{{ dessert.icon }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ dessert.image }}</td>
+            </tr>
+            <tr>
+                <th>Content</th>
+                <td>{{ dessert.content }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ dessert.price }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ dessert.type }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a class="btn btn-info" href="{{ path('app_dessert_index') }}">Index</a>
+
+    <a class="btn btn-warning " href="{{ path('app_dessert_edit', {'id': dessert.id}) }}">Edition</a>
+
+    {{ include('backoffice/dessert/_delete_form.html.twig') }}
+    </div>
+{% endblock %}

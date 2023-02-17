@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GeekFood Menus{% endblock %}
+
+{% block body %}
+    <div class="title">
+        <h1>Nos menus</h1>
+        
+    </div>
+    <main>
+        <div class="menu">
+         {% for key, menu in menus %}
+            <section>
+                <!--menu_name-->
+                <h3>{{ menu.name }}</h3>
+                <!--menu description-->
+                <p>{{ menu.content }} </p>
+                <!--price-->
+                <p class="price">{{ menu.price }}$</p>
+            </section>
+             {% endfor %}
+        </div>
+        <div class="nav">
+            
+           
+            <section>
+                <h4>La carte</h4>
+                <li><a href="../html/list.html">Entrées</a></li>
+                <li><a href="../html/list.html">Plats</a></li>
+                <li><a href="../html/list.html">Desserts</a></li>
+                <li><a href="../html/list.html">Boisons</a></li>
+                <li><a href="../html/menu.html">Menus</a></li>
+            </section>
+        </div>
+        <div class="nav">
+            
+           
+            <section>
+                <h4>Liste des jeux disponibles:</h4>
+                <li>Mario Kart</li>
+                <li>Smash Bros</li>
+                <li>Halo</li>
+                <li>Dragon Ball Ragging Blast 2</li>
+                <li>Street Figthers</li>
+                <li>Forza</li>
+                <li>FIFA</li>
+                <li>Ace Combat</li>
+                <li>Call Of Duty</li>
+                <li>Mario Party</li>
+            </section>
+        
+        </div>
+    </main>
+{% endblock %}

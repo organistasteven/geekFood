@@ -1,0 +1,13 @@
+{% extends 'baseback.html.twig' %}
+
+{% block title %}Edit Note{% endblock %}
+
+{% block body %}
+    <h1>Modification de la note de service</h1>
+
+    {{ include('backoffice/note/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a class="btn btn-info" href="{{ path('app_note_index') }}">Index</a>
+
+    {{ include('backoffice/note/_delete_form.html.twig') }}
+{% endblock %}

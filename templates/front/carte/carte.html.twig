@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GeekFood Carte{% endblock %}
+
+{% block body %}
+    <div class="title">
+        <h1>La Carte</h1>
+        <p>Avec des plats,des desserts, des entrées et et des boisons enjoy</p>
+    </div>
+    <main>
+        <div class="nav">
+            
+           
+            <section>
+                <h4>La carte</h4>
+                <li><a href="{{ path('app_start')}}">Entrées</a></li>
+                <li><a href="{{ path('app_plat')}}">Plats</a></li>
+                <li><a href="{{ path('app_dessert')}}">Desserts</a></li>
+                <li><a href="{{ path('app_drink')}}">Boisons</a></li>
+                <li><a href="{{ path('app_menu')}}">Menus</a></li>
+            </section>
+        </div>
+            <div class="nav">
+            <section>
+                <h4>Liste des jeux disponibles:</h4>
+                <li>Mario Kart</li>
+                <li>Smash Bros</li>
+                <li>Halo</li>
+                <li>Dragon Ball Ragging Blast 2</li>
+                <li>Street Figthers</li>
+                <li>Forza</li>
+                <li>FIFA</li>
+                <li>Ace Combat</li>
+                <li>Call Of Duty</li>
+                <li>Mario Party</li>
+            </section>
+        
+        </div>
+    </main>
+{% endblock %}

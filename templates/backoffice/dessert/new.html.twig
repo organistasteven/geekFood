@@ -1,0 +1,13 @@
+{% extends 'baseback.html.twig' %}
+
+{% block title %}New Dessert{% endblock %}
+
+{% block body %}
+<div class="backshow">
+    <h1>Création d'un nouveau dessert</h1>
+
+    {{ include('backoffice/dessert/_form.html.twig') }}
+
+    <a class="btn btn-info" href="{{ path('app_dessert_index') }}">Index</a>
+</div>
+{% endblock %}

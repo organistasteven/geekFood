@@ -1,0 +1,47 @@
+{% extends 'baseback.html.twig' %}
+
+{% block title %}Plat index{% endblock %}
+
+{% block body %}
+    <h1>Plat index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Icon</th>
+                <th>Image</th>
+                <th>Content</th>
+                <th>Price</th>
+                <th>Type</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for plat in plats %}
+            <tr>
+                <td>{{ plat.id }}</td>
+                <td>{{ plat.name }}</td>
+                <td>{{ plat.description }}</td>
+                <td>{{ plat.icon }}</td>
+                <td>{{ plat.image }}</td>
+                <td>{{ plat.content }}</td>
+                <td>{{ plat.price }}</td>
+                <td>{{ plat.type }}</td>
+                <td>
+                    <a class="btn btn-primary" href="{{ path('app_plat_show', {'id': plat.id}) }}">Détail</a>
+                    <a class="btn btn-warning" href="{{ path('app_plat_edit', {'id': plat.id}) }}">Edition</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="btn btn-success" href="{{ path('app_plat_new') }}">Ajouter un nouveau plat</a>
+{% endblock %}

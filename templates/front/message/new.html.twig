@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GeekFood Contact{% endblock %}
+
+{% block body %}
+    <div class="title">
+        <h1>Contactez nous</h1>
+        <p>Une question, une remarque n'hésitez pas!</p>
+    </div>
+<main>
+        <div class="contact">
+            <h3>Par mail:</h3>
+    {{ include('backoffice/message/_form.html.twig') }}
+        </div>
+   <div class="nav">
+
+            <section>
+            
+                <p>Par téléphone:</p>
+                <phone:a class="phone">01-55-57-89-00</phone:a>
+                <hr>
+                <p>Via les ressaux sociaux: </p>
+                <a href="https://fr-fr.facebook.com/" ><img class="sIcon" src="../images/icon/facebook.jpg" alt="facebook icon"></a>
+                <a href="https://twitter.com/?lang=fr" ><img class="sIcon" src="../images/icon/twiter.jpg" alt="twiter icon"></a>
+                <a href="https://www.tiktok.com/fr/" ><img class="sIcon" src="../images/icon/tick tock.png" alt="tick tock icon"></a>
+               <hr>
+                 <p>Notez-nous ou laisser un commentaire sur : </p>
+                <a href="https://www.tripadvisor.fr/" ><img class="sIcon" src="../images/icon/600x600-logo-tripadvisor.png" alt="tripadvisor icon"></a>
+                <a href="https://www.thefork.fr/" ><img class="sIcon" src="../images/icon/0x0.png" alt="la fourchette icon"></a>
+                
+            
+           </section>
+           
+        </div>
+    </main>
+{% endblock %}

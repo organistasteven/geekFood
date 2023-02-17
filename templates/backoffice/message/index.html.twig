@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Message index{% endblock %}
+
+{% block body %}
+<div class="backshow">
+    <h1>Liste des messages</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Mail</th>
+                <th>Content</th>
+                <th>Status</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for message in messages %}
+            <tr>
+                <td>{{ message.id }}</td>
+                <td>{{ message.name }}</td>
+                <td>{{ message.mail }}</td>
+                <td>{{ message.content }}</td>
+                <td>{{ message.status }}</td>
+                <td>
+                    <a class="btn btn-primary" href="{{ path('app_message_show', {'id': message.id}) }}">Détail</a>
+                    <a class="btn btn-warning" href="{{ path('app_message_edit', {'id': message.id}) }}">Mis à jour du message</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    </div>
+{% endblock %}

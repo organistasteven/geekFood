@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+ 
+{% block title %}GeekFood Home{% endblock %}
+
+{% block body %}
+<div class="title">
+        <h1>GeekFood</h1>
+        <p>Le resto des geeks et de la pop culture</p>
+    </div>
+        <main>
+        <div class="newsletters">
+      
+            <h3>L'actu de votre resto préféré </h3>
+            {% for news in newsShow %}
+            <h4>{{ news.title }}</h4>
+            <p>{{ news.content }}</p>
+            <p>{{ news.date|date('d-m-Y') }}</p>
+              {% endfor %}
+        </div>
+        <div class="nav">
+            
+           
+            <section>
+                <h4><a href="{{ path('app_carte')}}">La carte</a></h4>
+                 <li><a href="{{ path('app_start')}}">Entrées</a></li>
+                <li><a href="{{ path('app_plat')}}">Plats</a></li>
+                <li><a href="{{ path('app_dessert')}}">Desserts</a></li>
+                <li><a href="{{ path('app_drink')}}">Boisons</a></li>
+                <li><a href="{{ path('app_menu')}}">Menus</a></li>
+            </section>
+        
+        </div>
+    </main>
+
+{% endblock %}

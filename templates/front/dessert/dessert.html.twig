@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GeekFood Desserts{% endblock %}
+
+{% block body %}
+   <div class="title">
+        
+        <h1>Desserts</h1>
+        
+    </div>
+    <main>
+        <div class="list">
+        {% for key, dessert in desserts %}
+            <span class="foodHead">
+                <!--icon-->
+                <img class="foodIcon" src="{{ asset('' ~ dessert.icon ~ '') }}" >
+                <!--name-->
+                
+                <h4>{{ dessert.name }}</h4>
+                <!--price-->
+                <p>{{ dessert.price }}$</p> 
+              <!--image-->
+                <img class="foodPic" src="{{ asset('' ~ dessert.image ~ '') }}"  >
+            </span>
+            <!--description-->
+            <p>{{ dessert.description }}.
+            </p>
+            <!--ingredients-->
+            <p class="content">{{ dessert.content }}. </p>
+            <br>
+             {% endfor %}
+             </div>
+                <div class="nav">
+            
+           
+            <section>
+                <h4><a href="{{ path('app_carte')}}">La carte</a></h4>
+                 <li><a href="{{ path('app_start')}}">Entrées</a></li>
+                <li><a href="{{ path('app_plat')}}">Plats</a></li>
+                <li><a href="{{ path('app_dessert')}}">Desserts</a></li>
+                <li><a href="{{ path('app_drink')}}">Boisons</a></li>
+                <li><a href="{{ path('app_menu')}}">Menus</a></li>
+            </section>
+        
+        </div>
+{% endblock %}

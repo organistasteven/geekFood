@@ -1,0 +1,152 @@
+{% extends 'baseback.html.twig' %}
+
+{% block title %}GeekFood Back office home!{% endblock %}
+
+{% block body %}
+<div class="titleBack">
+<h1>Bienvenue dans l'interface administrateur de GeekFood</h1>
+<br>
+<h5 >Note de service générales </h5>
+<br>
+ {% for note in notesMain %}
+          <p >{{ note.content }}</p>
+          <p class="card-text">{{ note.createdAt|date('d-m-Y') }}</p>
+        {% endfor %}
+</div>
+<div class="row">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body" id="card">
+        <h5 class="card-title">Entrées</h5>
+         {% for note in notesStart %}
+          <p class="card-text">{{ note.content }}</p>
+          <p class="card-text">{{ note.createdAt|date('d-m-Y') }}</p>
+        {% endfor %}
+       <a class="btn btn-success" href="{{ path('app_start_new')}}" class="card-link">Ajout</a>
+     <a class="btn btn-warning" href="{{ path('app_start_index')}}"  class="card-link">Index</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Plats</h5>
+         {% for note in notesPlat %}
+          <p class="card-text">{{ note.content }}</p>
+          <p class="card-text">{{ note.createdAt|date('d-m-Y') }}</p>
+        {% endfor %}
+        <a class="btn btn-success" href="{{ path('app_plat_new')}}" class="card-link">Ajout</a>
+        <a class="btn btn-warning" href="{{ path('app_plat_index')}}"  class="card-link">Index</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Desserts</h5>
+        {% for note in notesDessert %}
+          <p class="card-text">{{ note.content }}</p>
+          <p class="card-text">{{ note.createdAt|date('d-m-Y') }}</p>
+        {% endfor %}
+       <a class="btn btn-success" href="{{ path('app_dessert_new')}}" class="card-link">Ajout</a>
+     <a class="btn btn-warning" href="{{ path('app_dessert_index')}}"  class="card-link">Index</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Boissons</h5>
+        {% for note in notesDrink %}
+          <p class="card-text">{{ note.content }}</p>
+          <p class="card-text">{{ note.createdAt|date('d-m-Y') }}</p>
+        {% endfor %}
+        <a class="btn btn-success" href="{{ path('app_drink_new')}}" class="card-link">Ajout</a>
+        <a class="btn btn-warning" href="{{ path('app_drink_index')}}"  class="card-link">Index</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Menus</h5>
+        {% for note in notesMenu %}
+          <p class="card-text">{{ note.content }}</p>
+          <p class="card-text">{{ note.createdAt|date('d-m-Y') }}</p>
+        {% endfor %}
+       <a class="btn btn-success" href="{{ path('app_menu_new')}}" class="card-link">Ajout</a>
+     <a class="btn btn-warning" href="{{ path('app_menu_index')}}"  class="card-link">Index</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Réservations</h5>
+        {% for note in notesReservation %}
+          <p class="card-text">{{ note.content }}</p>
+          <p class="card-text">{{ note.createdAt|date('d-m-Y') }}</p>
+        {% endfor %}
+        <a class="btn btn-success" href="{{ path('app_reservation_new')}}" class="card-link">Ajouter une réservation</a>
+        <a class="btn btn-warning" href="{{ path('app_reservation_index')}}"  class="card-link">Liste des réservations </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="row">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Utilisateurs</h5>
+         {% for note in notesUser %}
+          <p class="card-text">{{ note.content }}</p>
+          <p class="card-text">{{ note.createdAt|date('d-m-Y') }}</p>
+        {% endfor %}
+       <a class="btn btn-success" href="{{ path('app_user_new')}}" class="card-link">Ajout d'un nouvel utilisateur</a>
+     <a class="btn btn-warning" href="{{ path('app_user_index')}}"  class="card-link">Liste des notes de services</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Messages de service et Newsletter</h4>
+        <h5 class="card-title">Notes de service</h5>
+         {% for note in notesService %}
+          <p class="card-text">{{ note.content }}</p>
+          <p class="card-text">{{ note.createdAt|date('d-m-Y') }}</p>
+        {% endfor %}
+        <a class="btn btn-success" href="{{ path('app_note_new')}}" class="card-link">Ajout d'une nouvelle note de service</a>
+        <a class="btn btn-warning" href="{{ path('app_note_index')}}"  class="card-link">Liste des notes de services </a>
+         <h5 class="card-title">Newsletter</h5>
+         {% for note in notesNews %}
+          <p class="card-text">{{ note.content }}</p>
+          <p class="card-text">{{ note.createdAt|date('d-m-Y') }}</p>
+        {% endfor %}
+         <a class="btn btn-success" href="{{ path('app_news_new')}}"  class="card-link">Ajout d'une newsletter </a>
+        <a class="btn btn-warning" href="{{ path('app_news_index')}}"  class="card-link">Mis à jour de la newsletter </a>
+      </div>
+    </div>
+  </div>
+</div>
+ <div class="row">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Messages</h5>
+         {% for note in notesMessage %}
+          <p class="card-text">{{ note.content }}</p>
+          <p class="card-text">{{ note.createdAt|date('d-m-Y') }}</p>
+        {% endfor %}
+     <a class="btn btn-warning" href="{{ path('app_message_index')}}"  class="card-link">Liste des notes de Messages</a>
+      </div>
+    </div>
+  </div>
+    
+{% endblock %}
+ 

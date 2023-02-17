@@ -1,0 +1,18 @@
+{
+  "width": 456,
+  "height": 340,
+  "cx": [
+    [ "plats", 226 ],
+    [ "drink", 80 ],
+    [ "list", 226 ],
+    [ "menu", 374 ]
+  ],
+  "cy": [
+    [ "plats", 94 ],
+    [ "drink", 246 ],
+    [ "list", 246 ],
+    [ "menu", 246 ]
+  ],
+  "shift": [],
+  "ratio": []
+}

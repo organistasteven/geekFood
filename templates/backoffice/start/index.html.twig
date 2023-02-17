@@ -1,0 +1,49 @@
+{% extends 'baseback.html.twig' %}
+
+{% block title %}Start index{% endblock %}
+
+{% block body %}
+    <h1>Start index</h1>
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Icon</th>
+                <th scope="col" >Image</th>
+                <th scope="col">Content</th>
+                <th scope="col">Price</th>
+                <th scope="col">Type</th>
+                <th scope="col">actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for start in starts %}
+            <tr>
+                <td>{{ start.id }}</td>
+                <td>{{ start.name }}</td>
+                <td>{{ start.description }}</td>
+                <td>{{ start.icon }}</td>
+                <td>{{ start.image }}</td>
+                <td>{{ start.content }}</td>
+                <td>{{ start.price }}</td>
+                <td>{{ start.type }}</td>
+                <td>
+                    <a class="btn btn-primary" href="{{ path('app_start_show', {'id': start.id}) }}">Détail</a>
+                    <a class="btn btn-warning" href="{{ path('app_start_edit', {'id': start.id}) }}">Edition</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a  class="btn btn-success" href="{{ path('app_start_new') }}">Création d'une entrée</a>
+    
+{% endblock %}

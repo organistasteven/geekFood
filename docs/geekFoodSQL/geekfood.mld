@@ -1,0 +1,13 @@
+%%mocodo
+:::
+plats: code_plat, name, description, icon, image, ingredient, price, type
+:::
+
+
+:
+drink: code_drink, name, description, icon, image, ingredient, price, type
+:
+list: 10list_plat, 10list_drink, 11list_menu
+:
+menu: code_menu, name, description, price
+:
