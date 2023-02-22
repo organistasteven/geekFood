@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/start')]
 class StartController extends AbstractController
 {
-    #[Route('/start', name: 'app_start')]
+    #[Route('/', name: 'app_start')]
     public function start(StartRepository $startRepository): Response
     {
         return $this->render('front/start/start.html.twig', [
@@ -21,7 +21,7 @@ class StartController extends AbstractController
         ]);
     }
 
-    #[Route('/start/index', name: 'app_start_index')]
+    #[Route('/index', name: 'app_start_index')]
     public function index(StartRepository $startRepository): Response
     {
         return $this->render('backoffice/start/index.html.twig', [
@@ -42,7 +42,7 @@ class StartController extends AbstractController
             return $this->redirectToRoute('app_start_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('backoffice/start/new.html.twig', [
+        return $this->render('backoffice/start/new.html.twig', [
             'start' => $start,
             'form' => $form,
         ]);
@@ -68,7 +68,7 @@ class StartController extends AbstractController
             return $this->redirectToRoute('app_start_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('backoffice/start/edit.html.twig', [
+        return $this->render('backoffice/start/edit.html.twig', [
             'start' => $start,
             'form' => $form,
         ]);

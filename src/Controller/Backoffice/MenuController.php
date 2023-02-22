@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/menu')]
 class MenuController extends AbstractController
 {
-    #[Route('/menu', name: 'app_menu')]
+    #[Route('/', name: 'app_menu')]
     public function menu(MenuRepository $menuRepository): Response
     {
         return $this->render('front/menu/menu.html.twig', [
@@ -21,7 +21,7 @@ class MenuController extends AbstractController
         ]);
     }
 
-    #[Route('/menu/index', name: 'app_menu_index')]
+    #[Route('/index', name: 'app_menu_index')]
     public function index(MenuRepository $menuRepository): Response
     {
         return $this->render('backoffice/menu/index.html.twig', [
@@ -43,7 +43,7 @@ class MenuController extends AbstractController
             return $this->redirectToRoute('app_menu_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('backoffice/menu/new.html.twig', [
+        return $this->render('backoffice/menu/new.html.twig', [
             'menu' => $menu,
             'form' => $form,
         ]);
@@ -69,7 +69,7 @@ class MenuController extends AbstractController
             return $this->redirectToRoute('app_menu_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('backoffice/menu/edit.html.twig', [
+        return $this->render('backoffice/menu/edit.html.twig', [
             'menu' => $menu,
             'form' => $form,
         ]);

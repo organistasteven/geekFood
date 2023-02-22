@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use App\Entity\Message;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -12,9 +13,15 @@ class MessageFrontType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('name')
-            ->add('mail')
-            ->add('content')
+            ->add('name', TextType::class, [
+                'label' => 'Nom et prénom',
+            ])
+            ->add('mail', TextType::class, [
+                'label' => 'Adresse mail',
+            ])
+            ->add('content', TextType::class, [
+                'label' => 'Votre message',
+            ])
             ->remove('status')
         ;
     }

@@ -31,7 +31,7 @@ class NoteController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $noteRepository->save($note, true);
 
-            return $this->redirectToRoute('backoffice/app_note_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_note_index', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->render('backoffice/note/new.html.twig', [

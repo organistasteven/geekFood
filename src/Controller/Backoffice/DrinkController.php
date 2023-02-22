@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/drink')]
 class DrinkController extends AbstractController
 {
-    #[Route('/drink', name: 'app_drink')]
+    #[Route('/', name: 'app_drink')]
     public function drink(DrinkRepository $drinkRepository): Response
     {
         return $this->render('front/drink/drink.html.twig', [
@@ -26,7 +26,7 @@ class DrinkController extends AbstractController
         ]);
     }
 
-    #[Route('/drink/index', name: 'app_drink_index')]
+    #[Route('/index', name: 'app_drink_index')]
     public function index(DrinkRepository $drinkRepository): Response
     {
         return $this->render('backoffice/drink/index.html.twig', [

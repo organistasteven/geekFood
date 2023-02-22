@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/plat')]
 class PlatController extends AbstractController
 {
-    #[Route('/plat', name: 'app_plat')]
+    #[Route('/', name: 'app_plat')]
     public function plat(PlatRepository $platRepository): Response
     {
         return $this->render('front/plat/plat.html.twig', [
@@ -21,7 +21,7 @@ class PlatController extends AbstractController
         ]);
     }
 
-    #[Route('/plat/index', name: 'app_plat_index')]
+    #[Route('/index', name: 'app_plat_index')]
     public function index(PlatRepository $platRepository): Response
     {
         return $this->render('backoffice/plat/index.html.twig', [

@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use DateTime;
 use App\Repository\NewsRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
@@ -25,7 +26,12 @@ class News
 
     #[ORM\Column(length: 20)]
     private ?string $status = null;
+    
 
+
+    public function __construct(){
+        $this->date = new DateTime('now');
+    }
     public function getId(): ?int
     {
         return $this->id;

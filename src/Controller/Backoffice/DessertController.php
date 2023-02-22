@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/dessert')]
 class DessertController extends AbstractController
 {
-    #[Route('/dessert', name: 'app_dessert')]
+    #[Route('/', name: 'app_dessert')]
     public function dessert(DessertRepository $dessertRepository): Response
     {
         return $this->render('front/dessert/dessert.html.twig', [
@@ -26,7 +26,7 @@ class DessertController extends AbstractController
         ]);
     }
 
-    #[Route('/dessert/index', name: 'app_dessert_index')]
+    #[Route('/index', name: 'app_dessert_index')]
     public function index(DessertRepository $dessertRepository): Response
     {
         return $this->render('backoffice/dessert/index.html.twig', [
@@ -47,7 +47,7 @@ class DessertController extends AbstractController
             return $this->redirectToRoute('app_dessert_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('backoffice/dessert/new.html.twig', [
+        return $this->render('backoffice/dessert/new.html.twig', [
             'dessert' => $dessert,
             'form' => $form,
         ]);
@@ -73,7 +73,7 @@ class DessertController extends AbstractController
             return $this->redirectToRoute('app_dessert_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('backoffice/dessert/edit.html.twig', [
+        return $this->render('backoffice/dessert/edit.html.twig', [
             'dessert' => $dessert,
             'form' => $form,
         ]);

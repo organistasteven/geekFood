@@ -27,10 +27,7 @@
             <a href="{{ path('app_carte')}}">Carte</a> 
            <a href="{{ path('app_reservation_new')}}">Reservation</a> 
            <a href="{{ path('app_map')}}">Nous trouver</a>
-           {# https://symfony.com/doc/current/security.html#checking-to-see-if-a-user-is-logged-in-is-authenticated-fully #}
-            {% if is_granted('IS_AUTHENTICATED') %}
-           <a class="btn btn-danger" href="{{ path('app_logout') }}">Déconnexion</a>
-             {% endif %}
+           
            
         </nav>
     </header>
@@ -43,6 +40,10 @@
             <a href="{{ path('app_message_new')}}">Contact</a>
             <a href="{{ path('app_mention')}}">Mentions Légales</a>
             <a href="{{ path('app_about_us')}}">About Us</a>
+            {# https://symfony.com/doc/current/security.html#checking-to-see-if-a-user-is-logged-in-is-authenticated-fully #}
+            {% if is_granted('IS_AUTHENTICATED') %}
+           <a class="btn btn-danger" href="{{ path('app_logout') }}">Déconnexion</a>
+             {% endif %}
             {# https://symfony.com/doc/current/security.html#checking-to-see-if-a-user-is-logged-in-is-authenticated-fully #}
             {% if is_granted('IS_AUTHENTICATED') %}
                 <a href="{{ path('app_backhome')}}">Administration</a>
