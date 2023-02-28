@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use App\Entity\Reservation;
 use Symfony\Component\Form\AbstractType;
@@ -29,7 +30,7 @@ class ReservationFrontType extends AbstractType
             'label' => 'Taille du groupe',
         ])
         ->add('date')
-        ->add('complementaryIntel', TextType::class, [
+        ->add('complementaryIntel', TextAreaType::class, [
             'label' => 'Informations complémentaires',
         ])
         ->remove('status')

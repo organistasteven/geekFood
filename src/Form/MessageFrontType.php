@@ -2,6 +2,8 @@
 
 namespace App\Form;
 
+
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use App\Entity\Message;
 use Symfony\Component\Form\AbstractType;
@@ -19,7 +21,7 @@ class MessageFrontType extends AbstractType
             ->add('mail', TextType::class, [
                 'label' => 'Adresse mail',
             ])
-            ->add('content', TextType::class, [
+            ->add('content', TextareaType::class, [
                 'label' => 'Votre message',
             ])
             ->remove('status')
